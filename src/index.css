@@ -1,0 +1,76 @@
+:root {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: only light;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --font-display: 'Italiana', serif;
+  --font-script: 'Allura', cursive;
+  --font-body: 'Cormorant Garamond', serif;
+  --ink: #18324a;
+  --ink-soft: #4f6479;
+  --accent: #3b7fba;
+  --accent-dark: #1f4f7b;
+  --sand: #d6c4a5;
+  --sea: #7bb3d8;
+  --paper: #f4f0e7;
+  --olive: #6a7f4c;
+  --blush: #d891a1;
+  --sidebar-width: 240px;
+  --shadow-soft: 0 22px 45px rgba(26, 43, 60, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(226, 239, 252, 0.85), transparent 48%),
+    radial-gradient(circle at 85% 20%, rgba(129, 175, 214, 0.55), transparent 55%),
+    radial-gradient(circle at 75% 75%, rgba(214, 196, 165, 0.4), transparent 60%),
+    linear-gradient(180deg, #d4e9fb 0%, #a9c7e0 40%, #7bb3d8 70%, #d6c4a5 100%);
+  color: var(--ink);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 60%),
+    repeating-linear-gradient(
+      35deg,
+      rgba(255, 255, 255, 0.15) 0px,
+      rgba(255, 255, 255, 0.15) 2px,
+      transparent 2px,
+      transparent 7px
+    );
+  opacity: 0.5;
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
