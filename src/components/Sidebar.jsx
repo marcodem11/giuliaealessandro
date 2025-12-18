@@ -1,14 +1,16 @@
+import { NavLink } from 'react-router-dom'
+
 const navItems = [
-  { id: 'home', label: 'Home' },
-  { id: 'storia', label: 'La nostra storia' },
-  { id: 'giorno', label: 'Il giorno' },
-  { id: 'location', label: 'Location' },
-  { id: 'rsvp', label: 'RSVP' },
-  { id: 'lista-nozze', label: 'Lista nozze' },
-  { id: 'info', label: 'Info utili' },
+  { id: 'home', label: 'Home', path: '/' },
+  { id: 'storia', label: 'La nostra storia', path: '/storia' },
+  { id: 'giorno', label: 'Il giorno', path: '/giorno' },
+  { id: 'location', label: 'Location', path: '/location' },
+  { id: 'rsvp', label: 'RSVP', path: '/rsvp' },
+  { id: 'lista-nozze', label: 'Lista nozze', path: '/lista-nozze' },
+  { id: 'info', label: 'Info utili', path: '/info' },
 ]
 
-function Sidebar({ isOpen, onToggle }) {
+function Sidebar({ isOpen, onToggle, onClose }) {
   return (
     <aside className={`sidebar ${isOpen ? 'is-open' : ''}`}>
       <div className="sidebar__top">
@@ -19,9 +21,9 @@ function Sidebar({ isOpen, onToggle }) {
       </div>
       <nav className="sidebar__nav">
         {navItems.map((item) => (
-          <a key={item.id} href={`#${item.id}`} onClick={onToggle}>
+          <NavLink key={item.id} to={item.path} onClick={onClose} end>
             {item.label}
-          </a>
+          </NavLink>
         ))}
       </nav>
       <div className="sidebar__footer">
