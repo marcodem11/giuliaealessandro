@@ -2,10 +2,10 @@ import SectionHeading from '../components/SectionHeading'
 
 function Info() {
   return (
-    <section className="section page page--light">
+    <section className="section page page--jungle" id="info">
       <SectionHeading title="INFO UTILI" subtitle="Come arrivare" />
       <div className="info-grid">
-        <article>
+        <article className="poi-block">
           <h4>Come arrivare</h4>
           <p>La nostra casa si trova in una zona con disponibilità limitata di parcheggio.</p>
           <p>Per facilitare l'arrivo di tutti gli ospiti abbiamo organizzato anche un servizio navetta.</p>
@@ -22,7 +22,11 @@ function Info() {
             Per chi dovrà raggiungere il parcheggio presso la location l'indirizzo da seguire sarà
             il seguente:
           </p>
-          <p>[indirizzo]</p>
+          <p>
+            <a className="poi-link" href="https://share.google/hlEPeL9zCIPNkQ1Yv" target="_blank" rel="noreferrer">
+              📍 Casa dell'Olio
+            </a>
+          </p>
           <p>
             Nei giorni precedenti all'evento riceverete un breve video con le indicazioni per
             raggiungere l'ingresso.
@@ -33,7 +37,15 @@ function Info() {
           <h4>Servizio navetta</h4>
           <p>
             Per chi raggiungerà la location con il servizio navetta, sarà possibile lasciare l'auto
-            nel parcheggio a Porto Santo Stefano, presso: [indirizzo]
+            nel parcheggio a Porto Santo Stefano, presso:
+            <a
+              className="poi-link"
+              href="https://maps.app.goo.gl/3KPV4aWkjZHBVdhx8"
+              target="_blank"
+              rel="noreferrer"
+            >
+              📍 Porto Santo Stefano
+            </a>
           </p>
           <p>Da lì partiranno le navette che accompagneranno gli ospiti alla casa.</p>
           <p>

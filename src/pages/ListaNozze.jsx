@@ -2,7 +2,7 @@ import SectionHeading from '../components/SectionHeading'
 
 function ListaNozze() {
   return (
-    <section className="section page page--light">
+    <section className="section page page--jungle" id="lista-nozze">
       <SectionHeading
         title="Lista Nozze"
         subtitle="La vostra presenza sarà il dono più prezioso, ma se desideraste farci un regalo e contribuire al nostro viaggio di nozze trovate di seguito i dettagli."

@@ -2,7 +2,7 @@ import SectionHeading from '../components/SectionHeading'
 
 function Location() {
   return (
-    <section className="section page page--light">
+    <section className="section page page--jungle" id="location">
       <SectionHeading
         title="Monte Argentario"
         subtitle="Una terrazza sul mare per vivere insieme il nostro si."

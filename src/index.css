@@ -13,6 +13,8 @@
   --accent: #9bbfd7;
   --accent-dark: #1f455f;
   --sand: #f6eee3;
+  --parchment: #f9e1b7;
+  --jungle: #f9c16e;
   --deep-green: #203127;
   --wine: #6a1d2b;
   --light-text: #f8f4ed;
@@ -30,6 +32,7 @@ body {
   background: var(--sand);
   color: var(--ink);
   width: 100%;
+  margin: 0;
 }
 
 body::before {

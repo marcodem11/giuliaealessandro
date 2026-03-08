@@ -1,11 +1,11 @@
-import { NavLink } from 'react-router-dom'
-
 const navItems = [
-  { id: 'home', label: 'Home', path: '/' },
-  { id: 'giorno', label: 'Il nostro giorno', path: '/giorno' },
-  { id: 'info', label: 'Info utili', path: '/info' },
-  { id: 'rsvp', label: 'RSVP', path: '/rsvp' },
-  { id: 'lista-nozze', label: 'Lista nozze', path: '/lista-nozze' },
+  { id: 'home', label: 'Home', path: '#home' },
+  { id: 'giorno', label: 'Il nostro giorno', path: '#giorno' },
+  { id: 'info', label: 'Info utili', path: '#info' },
+  { id: 'rsvp', label: 'RSVP', path: '#rsvp' },
+  { id: 'lista-nozze', label: 'Lista nozze', path: '#lista-nozze' },
+  { id: 'storia', label: 'La nostra storia', path: '#storia' },
+  { id: 'location', label: 'Location', path: '#location' },
 ]
 
 function Sidebar({ isOpen, onToggle, onClose }) {
@@ -24,9 +24,9 @@ function Sidebar({ isOpen, onToggle, onClose }) {
       </div>
       <nav className="sidebar__nav">
         {navItems.map((item) => (
-          <NavLink key={item.id} to={item.path} onClick={onClose} end>
+          <a key={item.id} href={item.path} onClick={onClose}>
             {item.label}
-          </NavLink>
+          </a>
         ))}
       </nav>
       <div className="sidebar__footer">

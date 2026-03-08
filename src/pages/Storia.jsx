@@ -2,7 +2,7 @@ import SectionHeading from '../components/SectionHeading'
 
 function Storia() {
   return (
-    <section className="section page page--light">
+    <section className="section page page--parchment" id="storia">
       <SectionHeading
         title="Un viaggio iniziato al mare"
         subtitle="Ci siamo scelti con il sorriso di una sera d'estate e da allora non abbiamo piu smesso di sognare insieme."
