@@ -27,22 +27,10 @@ function Countdown({ targetDate }) {
     <div className="countdown">
       <p className="countdown__label">Mancano</p>
       <div className="countdown__grid">
-        <div>
-          <span>{String(timeLeft.days).padStart(2, '0')}</span>
-          <small>Giorni</small>
-        </div>
-        <div>
-          <span>{String(timeLeft.hours).padStart(2, '0')}</span>
-          <small>Ore</small>
-        </div>
-        <div>
-          <span>{String(timeLeft.minutes).padStart(2, '0')}</span>
-          <small>Minuti</small>
-        </div>
-        <div>
-          <span>{String(timeLeft.seconds).padStart(2, '0')}</span>
-          <small>Secondi</small>
-        </div>
+        <span>{String(timeLeft.days).padStart(2, '0')} giorni</span>
+        <span>{String(timeLeft.hours).padStart(2, '0')} ore</span>
+        <span>{String(timeLeft.minutes).padStart(2, '0')} minuti</span>
+        <span>{String(timeLeft.seconds).padStart(2, '0')} secondi</span>
       </div>
     </div>
   )

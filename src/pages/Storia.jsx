@@ -2,9 +2,8 @@ import SectionHeading from '../components/SectionHeading'
 
 function Storia() {
   return (
-    <section className="section page">
+    <section className="section page page--light">
       <SectionHeading
-        eyebrow="Un po' di noi"
         title="Un viaggio iniziato al mare"
         subtitle="Ci siamo scelti con il sorriso di una sera d'estate e da allora non abbiamo piu smesso di sognare insieme."
       />

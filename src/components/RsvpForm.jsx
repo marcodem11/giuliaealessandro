@@ -12,25 +12,25 @@ function RsvpForm() {
     <form className="rsvp" onSubmit={handleSubmit}>
       <div className="rsvp__grid">
         <label>
-          Nome e Cognome
+          Nome e Cognome*
           <input name="name" placeholder="Es. Giulia Rossi" required />
         </label>
         <label>
-          Email
+          Email*
           <input name="email" type="email" placeholder="nome@email.com" required />
         </label>
         <label>
-          Parteciperai?
+          Ci sarete il giorno del nostro matrimonio?*
           <select name="attendance" required>
             <option value="">Seleziona</option>
-            <option value="yes">Si, con piacere</option>
+            <option value="yes">Sì, con grande piacere</option>
             <option value="no">No, purtroppo no</option>
           </select>
         </label>
         <label>
-          Numero adulti
+          Quanti adulti sarete in totale?
           <select name="adults" required>
-            <option value="">Seleziona</option>
+            <option value="">Seleziona numero</option>
             {[1, 2, 3, 4, 5].map((value) => (
               <option key={value} value={value}>
                 {value}
@@ -39,9 +39,9 @@ function RsvpForm() {
           </select>
         </label>
         <label>
-          Bambini (se presenti)
+          Ci saranno bambini? Se sì, specifica quanti
           <select name="kids">
-            <option value="">Seleziona</option>
+            <option value="">Seleziona numero</option>
             {[0, 1, 2, 3, 4].map((value) => (
               <option key={value} value={value}>
                 {value}
@@ -50,26 +50,15 @@ function RsvpForm() {
           </select>
         </label>
         <label className="rsvp__full">
-          Allergie o preferenze alimentari
-          <input name="diet" placeholder="Es. vegetariano, senza glutine" />
+          Per favore specifica qui i nomi di adulti e bambini indicati
+          <textarea name="guests" rows="2" />
         </label>
         <label className="rsvp__full">
-          Trasporto desiderato
-          <div className="rsvp__choices">
-            <label className="rsvp__choice">
-              <input type="checkbox" name="transfer" value="navetta" /> Navetta dalla chiesa alla location
-            </label>
-            <label className="rsvp__choice">
-              <input type="checkbox" name="transfer" value="auto" /> Vengo con auto propria
-            </label>
-          </div>
-        </label>
-        <label className="rsvp__full">
-          Messaggio per gli sposi
-          <textarea name="message" rows="3" placeholder="Scrivi un pensiero" />
+          C'è qualcuno che ha tolleranze o preferenze alimentari? Specifica il nome e la sua necessità
+          <textarea name="diet" rows="3" />
         </label>
       </div>
-      <button type="submit">Conferma presenza</button>
+      <button type="submit">INVIA</button>
       {submitted && (
         <p className="rsvp__notice">
           Grazie! Questo e un form demo. Collega un servizio come Formspree o Netlify Forms per ricevere le risposte.

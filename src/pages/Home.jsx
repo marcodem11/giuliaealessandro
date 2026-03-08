@@ -2,7 +2,7 @@ import Hero from '../components/Hero'
 
 function Home() {
   return (
-    <div className="page">
+    <div className="page page--home">
       <Hero />
     </div>
   )

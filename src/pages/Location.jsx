@@ -2,9 +2,8 @@ import SectionHeading from '../components/SectionHeading'
 
 function Location() {
   return (
-    <section className="section page">
+    <section className="section page page--light">
       <SectionHeading
-        eyebrow="Location"
         title="Monte Argentario"
         subtitle="Una terrazza sul mare per vivere insieme il nostro si."
       />

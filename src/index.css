@@ -1,25 +1,22 @@
 :root {
   font-family: var(--font-body);
-  line-height: 1.6;
+  line-height: 1.5;
   font-weight: 400;
   color-scheme: only light;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --font-display: 'Italiana', serif;
+  --font-display: 'Cormorant Garamond', serif;
   --font-script: 'Allura', cursive;
-  --font-body: 'Cormorant Garamond', serif;
-  --ink: #1f3a2a;
-  --ink-soft: #4f6a5a;
-  --accent: #6fa382;
-  --accent-dark: #2f5e3f;
-  --sand: #cbbfa5;
-  --sea: #a9c7b6;
-  --paper: #f3f1ea;
-  --olive: #7d9869;
-  --sage: #a9c0a2;
-  --moss: #365740;
-  --sidebar-width: 240px;
-  --shadow-soft: 0 22px 45px rgba(26, 43, 60, 0.12);
+  --font-body: 'Montserrat', sans-serif;
+  --ink: #2e2b26;
+  --ink-soft: #4b5e6d;
+  --accent: #9bbfd7;
+  --accent-dark: #1f455f;
+  --sand: #f6eee3;
+  --deep-green: #203127;
+  --wine: #6a1d2b;
+  --light-text: #f8f4ed;
+  --shadow-soft: 0 20px 34px rgba(20, 32, 44, 0.12);
 }
 
 * {
@@ -30,31 +27,13 @@
 
 body {
   min-height: 100vh;
-  background:
-    linear-gradient(180deg, rgba(243, 241, 234, 0.92) 0%, rgba(243, 241, 234, 0.72) 45%, rgba(243, 241, 234, 0.6) 100%),
-    url('./assets/verdino.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: var(--sand);
   color: var(--ink);
+  width: 100%;
 }
 
 body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(120deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 60%),
-    repeating-linear-gradient(
-      35deg,
-      rgba(255, 255, 255, 0.15) 0px,
-      rgba(255, 255, 255, 0.15) 2px,
-      transparent 2px,
-      transparent 7px
-    );
-  opacity: 0.5;
-  z-index: -1;
+  content: none;
 }
 
 a {

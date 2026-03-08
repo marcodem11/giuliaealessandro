@@ -2,21 +2,24 @@ import { NavLink } from 'react-router-dom'
 
 const navItems = [
   { id: 'home', label: 'Home', path: '/' },
-  { id: 'storia', label: 'La nostra storia', path: '/storia' },
-  { id: 'giorno', label: 'Il giorno', path: '/giorno' },
-  { id: 'location', label: 'Location', path: '/location' },
+  { id: 'giorno', label: 'Il nostro giorno', path: '/giorno' },
+  { id: 'info', label: 'Info utili', path: '/info' },
   { id: 'rsvp', label: 'RSVP', path: '/rsvp' },
   { id: 'lista-nozze', label: 'Lista nozze', path: '/lista-nozze' },
-  { id: 'info', label: 'Info utili', path: '/info' },
 ]
 
 function Sidebar({ isOpen, onToggle, onClose }) {
   return (
     <aside className={`sidebar ${isOpen ? 'is-open' : ''}`}>
       <div className="sidebar__top">
-        <div className="monogram">G & A</div>
-        <button className="sidebar__toggle" onClick={onToggle} type="button">
-          {isOpen ? 'Chiudi' : 'Menu'}
+        <div className="monogram">G A</div>
+        <button
+          className="sidebar__toggle"
+          onClick={onToggle}
+          type="button"
+          aria-label="Chiudi menu"
+        >
+          Chiudi
         </button>
       </div>
       <nav className="sidebar__nav">
