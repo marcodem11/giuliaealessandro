@@ -2,10 +2,8 @@ const navItems = [
   { id: 'home', label: 'Home', path: '#home' },
   { id: 'giorno', label: 'Il nostro giorno', path: '#giorno' },
   { id: 'info', label: 'Info utili', path: '#info' },
-  { id: 'rsvp', label: 'RSVP', path: '#rsvp' },
   { id: 'lista-nozze', label: 'Lista nozze', path: '#lista-nozze' },
-  { id: 'storia', label: 'La nostra storia', path: '#storia' },
-  { id: 'location', label: 'Location', path: '#location' },
+  { id: 'rsvp', label: 'RSVP', path: '#rsvp' },
 ]
 
 function Sidebar({ isOpen, onToggle, onClose }) {
