@@ -13,14 +13,6 @@ function Sidebar({ isOpen, onToggle, onClose }) {
     <aside className={`sidebar ${isOpen ? 'is-open' : ''}`}>
       <div className="sidebar__top">
         <div className="monogram">G A</div>
-        <button
-          className="sidebar__toggle"
-          onClick={onToggle}
-          type="button"
-          aria-label="Chiudi menu"
-        >
-          Chiudi
-        </button>
       </div>
       <nav className="sidebar__nav">
         {navItems.map((item) => (
