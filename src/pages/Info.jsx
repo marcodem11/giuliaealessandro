@@ -5,7 +5,7 @@ function Info() {
   return (
     <section className="section page page--jungle" id="info">
       <Reveal>
-        <SectionHeading title="Info Utili" subtitle="Come arrivare" />
+        <SectionHeading title="Info Utili" />
       </Reveal>
       <div className="info-grid">
         <Reveal delay={0.1}>

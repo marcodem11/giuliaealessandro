@@ -7,18 +7,15 @@ function Giorno() {
       <Reveal>
         <SectionHeading
           title="Il Nostro Giorno"
-          subtitle="La cerimonia avra inizio alle ore 18:00 e da li continueremo a festeggiare insieme per tutta la serata."
+          subtitle="Non vediamo l'ora di vivere questa giornata insieme a voi!"
         />
       </Reveal>
       <Reveal delay={0.15}>
         <div className="day-grid">
           <article>
             <h3>Cerimonia</h3>
-            <p>La cerimonia avra inizio alle ore 18:00.</p>
-          </article>
-          <article>
-            <h3>Il nostro posto del cuore</h3>
             <p>Abbiamo scelto di celebrare questo giorno nel nostro posto del cuore, a casa.</p>
+            <p>La cerimonia avra inizio alle ore 18:00 e da li continueremo a festeggiare insieme per tutta la serata.</p>
           </article>
         </div>
       </Reveal>

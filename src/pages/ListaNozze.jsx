@@ -1,7 +1,6 @@
 import SectionHeading from '../components/SectionHeading'
 import Reveal from '../components/Reveal'
 import polaroid0 from '../assets/polaroid.jpeg'
-import polaroid1 from '../assets/polaroid1.jpeg'
 import polaroid2 from '../assets/polaroid2.jpeg'
 import polaroid3 from '../assets/polaroid3.jpeg'
 import polaroid4 from '../assets/polaroid4.jpeg'
@@ -27,9 +26,6 @@ function ListaNozze() {
         <div className="polaroid-gallery">
           <div className="polaroid">
             <img src={polaroid0} alt="Giulia e Alessandro" />
-          </div>
-          <div className="polaroid">
-            <img src={polaroid1} alt="Giulia e Alessandro" />
           </div>
           <div className="polaroid">
             <img src={polaroid2} alt="Giulia e Alessandro" />

@@ -12,7 +12,6 @@ function Hero() {
         <span>Giulia e Alessandro</span>
       </h1>
       <p className="hero__subtitle">4 Luglio 2026 - Monte Argentario</p>
-      <p className="hero__intro">Non vediamo l'ora di vivere questa giornata insieme a voi!</p>
       <Countdown targetDate="2026-07-04T15:30:00" />
     </section>
   )

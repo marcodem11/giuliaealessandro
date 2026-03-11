@@ -20,7 +20,7 @@
   height: 42px;
   border: none;
   border-radius: 999px;
-  background: rgba(42, 60, 37, 0.55);
+  background: rgba(53, 69, 80, 0.55);
   backdrop-filter: blur(4px);
   display: inline-flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
 }
 
 .burger:hover {
-  background: rgba(42, 60, 37, 0.75);
+  background: rgba(53, 69, 80, 0.75);
 }
 
 .burger span {
@@ -44,7 +44,7 @@
 }
 
 .burger.is-floating {
-  box-shadow: 0 8px 20px rgba(42, 60, 37, 0.18);
+  box-shadow: 0 8px 20px rgba(53, 69, 80, 0.18);
 }
 
 .burger.is-open span:nth-child(1) {
@@ -86,7 +86,7 @@
 
 .page--parchment {
   background: var(--parchment);
-  color: var(--deep-green);
+  color: var(--deep-blue);
 }
 
 .page--jungle {
@@ -225,41 +225,41 @@
 
 /* ── Section color schemes ───────────────────── */
 
-/* Parchment sections: green text */
+/* Parchment sections: dark blue text */
 .page--parchment .section__heading h2 {
-  color: var(--deep-green);
+  color: var(--deep-blue);
 }
 
 .page--parchment .section__eyebrow {
-  color: rgba(42, 60, 37, 0.55);
+  color: rgba(53, 69, 80, 0.55);
 }
 
 .page--parchment .section__heading p,
 .page--parchment p,
 .page--parchment li {
-  color: rgba(42, 60, 37, 0.82);
+  color: rgba(53, 69, 80, 0.82);
 }
 
 .page--parchment h3,
 .page--parchment h4 {
-  color: var(--deep-green);
+  color: var(--deep-blue);
   font-family: var(--font-display);
   font-weight: 400;
 }
 
-/* Jungle sections: parchment/cream text */
+/* Stiffkey Blue sections: cream/warm text */
 .page--jungle .section__heading h2 {
   color: var(--parchment);
 }
 
 .page--jungle .section__eyebrow {
-  color: rgba(249, 225, 183, 0.55);
+  color: rgba(232, 226, 213, 0.55);
 }
 
 .page--jungle .section__heading p,
 .page--jungle p,
 .page--jungle li {
-  color: rgba(249, 225, 183, 0.85);
+  color: rgba(232, 226, 213, 0.85);
 }
 
 .page--jungle h3,
@@ -395,17 +395,17 @@
 .rsvp input,
 .rsvp select,
 .rsvp textarea {
-  border: 1px solid rgba(249, 225, 183, 0.25);
+  border: 1px solid rgba(232, 226, 213, 0.25);
   border-radius: 6px;
   padding: 0.65rem 0.75rem;
   font-size: 0.9rem;
   width: 100%;
-  background: rgba(249, 225, 183, 0.12);
+  background: rgba(232, 226, 213, 0.12);
   color: var(--parchment);
 }
 
 .rsvp input::placeholder {
-  color: rgba(249, 225, 183, 0.4);
+  color: rgba(232, 226, 213, 0.4);
 }
 
 .rsvp select {
@@ -422,8 +422,8 @@
 .rsvp textarea:focus {
   outline: none;
   border-color: var(--parchment);
-  box-shadow: 0 0 0 2px rgba(249, 225, 183, 0.15);
-  background: rgba(249, 225, 183, 0.18);
+  box-shadow: 0 0 0 2px rgba(232, 226, 213, 0.15);
+  background: rgba(232, 226, 213, 0.18);
 }
 
 .rsvp__full {
@@ -444,7 +444,7 @@
 .rsvp button {
   margin-top: 0.3rem;
   background: var(--parchment);
-  color: var(--deep-green);
+  color: var(--deep-blue);
   border: none;
   padding: 0.75rem 1.8rem;
   border-radius: 999px;
@@ -540,7 +540,6 @@
 .polaroid:nth-child(3) { transform: rotate(-1.5deg); }
 .polaroid:nth-child(4) { transform: rotate(3.5deg); }
 .polaroid:nth-child(5) { transform: rotate(-2.5deg); }
-.polaroid:nth-child(6) { transform: rotate(1.8deg); }
 
 .polaroid:hover {
   transform: rotate(0deg) scale(1.08);
@@ -569,7 +568,7 @@
 
 .info-map__frame {
   margin-top: 0.6rem;
-  border: 1px solid rgba(42, 60, 37, 0.15);
+  border: 1px solid rgba(53, 69, 80, 0.15);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -604,7 +603,7 @@
 .footer {
   text-align: center;
   padding: 1.5rem 0 0.4rem;
-  color: var(--deep-green);
+  color: var(--deep-blue);
   font-size: 0.82rem;
   font-weight: 300;
   letter-spacing: 0.05em;
@@ -636,7 +635,7 @@
   height: 100vh;
   width: min(300px, 85vw);
   background: var(--parchment);
-  border-left: 1px solid rgba(42, 60, 37, 0.1);
+  border-left: 1px solid rgba(53, 69, 80, 0.1);
   padding: 5rem 1.4rem 1.4rem;
   display: flex;
   flex-direction: column;
@@ -660,7 +659,7 @@
 .monogram {
   font-family: var(--font-display);
   font-size: 1.4rem;
-  color: var(--deep-green);
+  color: var(--deep-blue);
   letter-spacing: 0.12em;
   font-weight: 400;
   font-style: italic;
@@ -674,7 +673,7 @@
 }
 
 .sidebar__nav a {
-  color: var(--deep-green);
+  color: var(--deep-blue);
   text-decoration: none;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
@@ -705,7 +704,7 @@
   display: block;
   position: fixed;
   inset: 0;
-  background: rgba(42, 60, 37, 0.3);
+  background: rgba(53, 69, 80, 0.3);
   z-index: 7;
 }
 
