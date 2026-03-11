@@ -1,24 +1,28 @@
 :root {
   font-family: var(--font-body);
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
   color-scheme: only light;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --font-display: 'Cormorant Garamond', serif;
+
+  /* Fonts */
+  --font-display: 'Playfair Display', serif;
   --font-script: 'Allura', cursive;
-  --font-body: 'Montserrat', sans-serif;
+  --font-body: 'Raleway', sans-serif;
+
+  /* Waypoint Palette */
+  --jungle: #3E5035;
+  --parchment: #F9E1B7;
+  --deep-green: #2A3C25;
+  --sand: #F5F0E8;
   --ink: #2e2b26;
-  --ink-soft: #4b5e6d;
-  --accent: #9bbfd7;
-  --accent-dark: #1f455f;
-  --sand: #f6eee3;
-  --parchment: #f9e1b7;
-  --jungle: #f9c16e;
-  --deep-green: #203127;
+  --ink-soft: #5a6b5e;
+  --accent: #6B8F5E;
+  --accent-dark: #3E5035;
   --wine: #6a1d2b;
-  --light-text: #f8f4ed;
-  --shadow-soft: 0 20px 34px rgba(20, 32, 44, 0.12);
+  --light-text: #F9E1B7;
+  --shadow-soft: 0 20px 34px rgba(20, 32, 20, 0.10);
 }
 
 * {
