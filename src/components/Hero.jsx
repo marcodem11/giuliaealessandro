@@ -6,7 +6,7 @@ function Hero() {
     <section
       className="hero"
       id="home"
-      style={{ backgroundImage: `linear-gradient(rgba(8, 15, 29, 0.48), rgba(8, 15, 29, 0.55)), url(${heroPhoto})` }}
+      style={{ backgroundImage: `linear-gradient(rgba(8, 12, 28, 0.58), rgba(8, 12, 28, 0.65)), url(${heroPhoto})` }}
     >
       <p className="hero__date">04.07.2026</p>
       <h1 className="hero__title">
