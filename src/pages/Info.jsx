@@ -52,7 +52,7 @@ function Info() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Porto Santo Stefano
+                Via del Campone, 117
               </a>
             </p>
             <p>Da li partiranno le navette che accompagneranno gli ospiti alla casa.</p>
