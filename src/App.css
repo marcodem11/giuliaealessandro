@@ -698,7 +698,10 @@
 }
 
 .sidebar__nav a.active {
-  color: var(--accent);
+  color: var(--deep-blue);
+  opacity: 1;
+  border-bottom: 1.5px solid var(--deep-blue);
+  padding-bottom: 2px;
 }
 
 .sidebar__footer {

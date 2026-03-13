@@ -6,7 +6,7 @@ const navItems = [
   { id: 'rsvp', label: 'RSVP', path: '#rsvp' },
 ]
 
-function Sidebar({ isOpen, onToggle, onClose }) {
+function Sidebar({ isOpen, onToggle, onClose, activeSection }) {
   return (
     <aside className={`sidebar ${isOpen ? 'is-open' : ''}`}>
       <div className="sidebar__top">
@@ -14,7 +14,12 @@ function Sidebar({ isOpen, onToggle, onClose }) {
       </div>
       <nav className="sidebar__nav">
         {navItems.map((item) => (
-          <a key={item.id} href={item.path} onClick={onClose}>
+          <a
+            key={item.id}
+            href={item.path}
+            className={activeSection === item.id ? 'active' : ''}
+            onClick={onClose}
+          >
             {item.label}
           </a>
         ))}
