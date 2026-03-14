@@ -29,7 +29,7 @@ function RsvpForm() {
     setLoading(false)
 
     if (dbError) {
-      setError('Si e verificato un errore. Riprova tra poco.')
+      setError('Si è verificato un errore. Riprova tra poco.')
       return
     }
 
@@ -41,7 +41,7 @@ function RsvpForm() {
       <div className="rsvp" style={{ textAlign: 'center' }}>
         <p style={{ fontSize: '1.1rem', fontWeight: 500 }}>Grazie per aver confermato!</p>
         <p style={{ fontSize: '0.85rem', marginTop: '0.5rem' }}>
-          La vostra risposta e stata registrata correttamente.
+          La vostra risposta è stata registrata correttamente.
         </p>
       </div>
     )
@@ -62,7 +62,7 @@ function RsvpForm() {
           Ci sarete il giorno del nostro matrimonio?*
           <select name="attendance" required>
             <option value="">Seleziona</option>
-            <option value="yes">Si, con grande piacere</option>
+            <option value="yes">Sì, con grande piacere</option>
             <option value="no">No, purtroppo no</option>
           </select>
         </label>
@@ -78,7 +78,7 @@ function RsvpForm() {
           </select>
         </label>
         <label>
-          Ci saranno bambini? Se si, specifica quanti
+          Ci saranno bambini? Se sì, specifica quanti
           <select name="kids">
             <option value="">Seleziona numero</option>
             {[0, 1, 2, 3, 4].map((value) => (
@@ -93,7 +93,7 @@ function RsvpForm() {
           <textarea name="guests" rows="2" />
         </label>
         <label className="rsvp__full">
-          C'e qualcuno che ha intolleranze o preferenze alimentari? Specifica il nome e la sua necessita
+          C'è qualcuno che ha intolleranze o preferenze alimentari? Specifica il nome e la sua necessità
           <textarea name="diet" rows="3" />
         </label>
       </div>

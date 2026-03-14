@@ -12,7 +12,7 @@ function ListaNozze() {
       <Reveal>
         <SectionHeading
           title="Lista Nozze"
-          subtitle="La vostra presenza sara il dono piu prezioso, ma se desideraste farci un regalo e contribuire al nostro viaggio di nozze trovate di seguito i dettagli."
+          subtitle="La vostra presenza sarà il dono più prezioso, ma se desideraste farci un regalo e contribuire al nostro viaggio di nozze trovate di seguito i dettagli."
         />
       </Reveal>
       <Reveal delay={0.15}>

@@ -5,7 +5,7 @@ function Location() {
     <section className="section page page--jungle" id="location">
       <SectionHeading
         title="Monte Argentario"
-        subtitle="Una terrazza sul mare per vivere insieme il nostro si."
+        subtitle="Una terrazza sul mare per vivere insieme il nostro sì."
       />
       <div className="details">
         <div>
