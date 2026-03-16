@@ -55,7 +55,7 @@ function Info() {
                 Via del Campone, 117
               </a>
             </p>
-            <p>Da lì partiranno le navette che accompagneranno gli ospiti alla casa.</p>
+            <p>Da lì partiranno le navette che accompagneranno gli ospiti alla Location.</p>
             <p>
               Nei giorni precedenti all'evento riceverete tutti i dettagli e gli orari del servizio.
             </p>
@@ -66,7 +66,7 @@ function Info() {
           <article>
             <h4>Dove soggiornare</h4>
             <p>
-              La casa si trova sulla panoramica del Monte Argentario, a pochi minuti da diverse
+              La Villa si trova sulla panoramica del Monte Argentario, a pochi minuti da diverse
               località dove è possibile trovare hotel, B&amp;B e appartamenti.
             </p>
             <p>
