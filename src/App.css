@@ -165,7 +165,7 @@
 
 /* ── Countdown ───────────────────────────────── */
 .countdown {
-  margin-top: 0.6rem;
+  margin-top: 2rem;
   width: auto;
   padding: 0;
   border: none;
@@ -232,7 +232,7 @@
   line-height: 1.7;
   font-family: var(--font-body);
   font-size: 0.92rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ── Section color schemes ───────────────────── */
