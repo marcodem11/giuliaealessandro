@@ -1,13 +1,18 @@
 import Countdown from './Countdown'
-import heroPhoto from '../assets/IMG_1607.PNG'
+import heroVideo from '../assets/video.mp4'
 
 function Hero() {
   return (
-    <section
-      className="hero"
-      id="home"
-      style={{ backgroundImage: `linear-gradient(rgba(8, 12, 28, 0.58), rgba(8, 12, 28, 0.65)), url(${heroPhoto})` }}
-    >
+    <section className="hero" id="home">
+      <video
+        className="hero__video"
+        src={heroVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <div className="hero__overlay" />
       <p className="hero__date">04.07.2026</p>
       <h1 className="hero__title">
         <span>Giulia e Alessandro</span>

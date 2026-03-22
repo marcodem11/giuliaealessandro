@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Australia Custom';
+  src: url('./assets/fonts/Australia Custom.woff2') format('woff2'),
+       url('./assets/fonts/Australia Custom.woff') format('woff'),
+       url('./assets/fonts/Australia Custom.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   font-family: var(--font-body);
   line-height: 1.6;
