@@ -11,7 +11,7 @@ function Info() {
         <Reveal delay={0.1}>
           <article>
             <h4>Come arrivare</h4>
-            <p>La nostra casa si trova in una zona con disponibilità limitata di parcheggio.</p>
+            <p>La nostra villa si trova in una zona con disponibilità limitata di parcheggio.</p>
             <p>Per facilitare l'arrivo di tutti gli ospiti abbiamo organizzato anche un servizio navetta.</p>
             <p>
               Nei giorni precedenti all'evento riceverete alcune informazioni pratiche per l'arrivo,
@@ -55,7 +55,7 @@ function Info() {
                 Via del Campone, 117
               </a>
             </p>
-            <p>Da lì partiranno le navette che accompagneranno gli ospiti alla Location.</p>
+            <p>Da lì partiranno le navette che accompagneranno gli ospiti alla location.</p>
             <p>
               Nei giorni precedenti all'evento riceverete tutti i dettagli e gli orari del servizio.
             </p>
@@ -66,12 +66,12 @@ function Info() {
           <article>
             <h4>Dove soggiornare</h4>
             <p>
-              La Villa si trova sulla panoramica del Monte Argentario, a pochi minuti da diverse
+              La villa si trova sulla panoramica del Monte Argentario, a pochi minuti da diverse
               località dove è possibile trovare hotel, B&amp;B e appartamenti.
             </p>
             <p>
               Le zone con la maggiore disponibilità di alloggi sono Porto Santo Stefano e Porto
-              Ercole, entrambe vicine alla casa e facilmente raggiungibili in auto (rispettivamente
+              Ercole, entrambe vicine alla villa e facilmente raggiungibili in auto (rispettivamente
               a circa 15 e 25 minuti di distanza).
             </p>
             <p>
