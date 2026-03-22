@@ -915,3 +915,246 @@
     font-size: 0.72rem;
   }
 }
+
+/* ── Secret Link ────────────────────────────── */
+.sidebar__secret {
+  cursor: pointer;
+}
+
+/* ── Login Page ─────────────────────────────── */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--jungle);
+  position: relative;
+}
+
+.login-back {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--parchment);
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.login-back:hover {
+  opacity: 1;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: min(340px, 85vw);
+}
+
+.login-form__title {
+  font-family: var(--font-display);
+  color: var(--parchment);
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.login-form input {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(250, 245, 231, 0.25);
+  border-radius: 6px;
+  background: rgba(250, 245, 231, 0.08);
+  color: var(--parchment);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-form input::placeholder {
+  color: rgba(250, 245, 231, 0.45);
+}
+
+.login-form input:focus {
+  border-color: rgba(250, 245, 231, 0.5);
+}
+
+.login-form__error {
+  color: #e8a0a0;
+  font-size: 0.78rem;
+  text-align: center;
+  font-family: var(--font-body);
+}
+
+.login-form__btn {
+  padding: 0.75rem;
+  border: 1px solid var(--parchment);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--parchment);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.login-form__btn:hover {
+  background: var(--parchment);
+  color: var(--jungle);
+}
+
+/* ── Admin Page ─────────────────────────────── */
+.admin-page {
+  min-height: 100vh;
+  background: var(--sand);
+  padding: 2rem 5vw 4rem;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.admin-header .login-back {
+  position: static;
+  color: var(--deep-blue);
+}
+
+.admin-header__title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--deep-blue);
+}
+
+.admin-loading,
+.admin-empty {
+  text-align: center;
+  font-family: var(--font-body);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+.admin-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.admin-stat {
+  background: var(--parchment);
+  border: 1px solid rgba(53, 69, 80, 0.1);
+  border-radius: 10px;
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+.admin-stat__number {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--jungle);
+  font-weight: 600;
+}
+
+.admin-stat__label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  margin-top: 0.2rem;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(53, 69, 80, 0.1);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  background: var(--parchment);
+}
+
+.admin-table th {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(53, 69, 80, 0.12);
+}
+
+.admin-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(53, 69, 80, 0.06);
+  color: var(--ink);
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.admin-badge--yes {
+  background: rgba(76, 140, 100, 0.15);
+  color: #3a7a50;
+}
+
+.admin-badge--no {
+  background: rgba(180, 80, 80, 0.12);
+  color: #a04040;
+}
+
+@media (max-width: 680px) {
+  .admin-stats {
+    gap: 0.8rem;
+  }
+
+  .admin-stat {
+    min-width: 80px;
+    padding: 0.9rem 1rem;
+  }
+
+  .admin-stat__number {
+    font-size: 1.5rem;
+  }
+
+  .admin-table {
+    font-size: 0.75rem;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 0.6rem 0.6rem;
+  }
+}

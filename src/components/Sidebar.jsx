@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom'
+
 const navItems = [
   { id: 'home', label: 'Home', path: '#home' },
   { id: 'giorno', label: 'Il nostro giorno', path: '#giorno' },
@@ -7,6 +9,13 @@ const navItems = [
 ]
 
 function Sidebar({ isOpen, onToggle, onClose, activeSection }) {
+  const navigate = useNavigate()
+
+  const handleSecretClick = () => {
+    onClose()
+    navigate('/login')
+  }
+
   return (
     <aside className={`sidebar ${isOpen ? 'is-open' : ''}`}>
       <div className="sidebar__top">
@@ -26,7 +35,7 @@ function Sidebar({ isOpen, onToggle, onClose, activeSection }) {
       </nav>
       <div className="sidebar__footer">
         <span>4 Luglio 2026</span>
-        <span>Monte Argentario</span>
+        <span className="sidebar__secret" onClick={handleSecretClick}>Monte Argentario</span>
       </div>
     </aside>
   )
