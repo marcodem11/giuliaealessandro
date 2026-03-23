@@ -126,6 +126,18 @@
   z-index: 0;
 }
 
+/* Hide the native play button that appears on mobile (data saver / low power) */
+.hero__video::-webkit-media-controls-start-playback-button,
+.hero__video::-webkit-media-controls-play-button,
+.hero__video::-webkit-media-controls {
+  display: none !important;
+  -webkit-appearance: none;
+}
+.hero__video::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 .hero__overlay {
   position: absolute;
   top: 0;
