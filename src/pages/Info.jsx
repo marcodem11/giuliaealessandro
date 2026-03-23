@@ -11,7 +11,7 @@ function Info() {
         <Reveal delay={0.1}>
           <article>
             <h4>Come arrivare</h4>
-            <p>La nostra villa si trova in una zona con disponibilità limitata di parcheggio.</p>
+            <p>La villa si trova in una zona con disponibilità limitata di parcheggio.</p>
             <p>Per facilitare l'arrivo di tutti gli ospiti abbiamo organizzato anche un servizio navetta.</p>
             <p>
               Nei giorni precedenti all'evento riceverete alcune informazioni pratiche per l'arrivo,
@@ -48,11 +48,11 @@ function Info() {
               nel parcheggio a Porto Santo Stefano, presso:{' '}
               <a
                 className="poi-link"
-                href="https://maps.app.goo.gl/3KPV4aWkjZHBVdhx8"
+                href="https://maps.app.goo.gl/QcyuoWia4QdiAcyx8"
                 target="_blank"
                 rel="noreferrer"
               >
-                Via del Campone, 117
+                Via del Campone, 105
               </a>
             </p>
             <p>Da lì partiranno le navette che accompagneranno gli ospiti alla location.</p>

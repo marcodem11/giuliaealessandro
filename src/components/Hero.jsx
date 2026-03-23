@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 import Countdown from './Countdown'
-import heroVideo from '../assets/video.mp4'
+import heroVideo from '../assets/video1.MOV'
 
 function Hero() {
   const videoRef = useRef(null)
