@@ -49,7 +49,7 @@ function Admin() {
             <path d="M12 19l-7-7 7-7" />
           </svg>
         </button>
-        <h1 className="admin-header__title">Risposte RSVP</h1>
+        <h1 className="admin-header__title">Rispostee RSVP</h1>
       </header>
 
       {loading ? (
