@@ -80,6 +80,14 @@ function Info() {
             </p>
           </article>
         </Reveal>
+        <Reveal delay={0.5}>
+          <article>
+            <h4>Tips</h4>
+            <p>
+              Consigliamo scarpe comode o con tacco basso così da godervi al meglio la giornata
+            </p>
+          </article>
+        </Reveal>
       </div>
     </section>
   )

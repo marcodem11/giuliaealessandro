@@ -1,34 +1,47 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import Countdown from './Countdown'
 import heroVideo from '../assets/video1.MOV'
+import fallbackImg from '../assets/IMG_1607.PNG'
 
 function Hero() {
   const videoRef = useRef(null)
+  const [useFallback, setUseFallback] = useState(false)
 
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
 
-    // Force muted (some iOS versions need the property, not just the attribute)
     video.muted = true
-    // Remove controls so no play button can appear
     video.controls = false
     video.setAttribute('playsinline', '')
     video.setAttribute('webkit-playsinline', '')
 
+    let settled = false
+
     const tryPlay = () => {
+      if (settled) return
       video.muted = true
       const promise = video.play()
-      if (promise) promise.catch(() => {})
+      if (promise) {
+        promise.catch(() => {
+          // Autoplay blocked — switch to fallback image
+          if (!settled) {
+            settled = true
+            setUseFallback(true)
+          }
+        })
+      }
     }
+
+    // Mark as settled once video is actually playing
+    const onPlaying = () => { settled = true }
+    video.addEventListener('playing', onPlaying)
 
     tryPlay()
 
-    // Retry when video data is ready
     video.addEventListener('loadeddata', tryPlay)
     video.addEventListener('canplay', tryPlay)
 
-    // Retry when the video becomes visible (handles iOS scroll-to-play)
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) tryPlay()
@@ -37,7 +50,6 @@ function Hero() {
     )
     observer.observe(video)
 
-    // Retry on any user interaction (touch, scroll, click)
     const events = ['touchstart', 'scroll', 'click', 'pointerdown']
     const onInteraction = () => {
       tryPlay()
@@ -47,6 +59,7 @@ function Hero() {
 
     return () => {
       observer.disconnect()
+      video.removeEventListener('playing', onPlaying)
       video.removeEventListener('loadeddata', tryPlay)
       video.removeEventListener('canplay', tryPlay)
       events.forEach(e => document.removeEventListener(e, onInteraction))
@@ -55,17 +68,26 @@ function Hero() {
 
   return (
     <section className="hero" id="home">
-      <video
-        ref={videoRef}
-        className="hero__video"
-        src={heroVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-        webkit-playsinline=""
-        preload="auto"
-      />
+      {useFallback ? (
+        <img
+          className="hero__video"
+          src={fallbackImg}
+          alt=""
+          aria-hidden="true"
+        />
+      ) : (
+        <video
+          ref={videoRef}
+          className="hero__video"
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          webkit-playsinline=""
+          preload="auto"
+        />
+      )}
       <div className="hero__overlay" />
       <p className="hero__date">04.07.2026</p>
       <h1 className="hero__title">
