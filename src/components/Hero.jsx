@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react'
 import Countdown from './Countdown'
-import heroVideo from '../assets/video1.MOV'
+import heroVideoMov from '../assets/video1.MOV'
+import heroVideoMp4 from '../assets/video2.mp4'
 import fallbackImg from '../assets/IMG_1607.PNG'
 
 function Hero() {
@@ -37,6 +38,23 @@ function Hero() {
     const onPlaying = () => { settled = true }
     video.addEventListener('playing', onPlaying)
 
+    // If the video fails to load entirely, switch to fallback
+    const onError = () => {
+      if (!settled) {
+        settled = true
+        setUseFallback(true)
+      }
+    }
+    video.addEventListener('error', onError)
+
+    // Timeout: if video hasn't played within 4s, show fallback
+    const timeout = setTimeout(() => {
+      if (!settled) {
+        settled = true
+        setUseFallback(true)
+      }
+    }, 4000)
+
     tryPlay()
 
     video.addEventListener('loadeddata', tryPlay)
@@ -58,8 +76,10 @@ function Hero() {
     events.forEach(e => document.addEventListener(e, onInteraction, { once: true }))
 
     return () => {
+      clearTimeout(timeout)
       observer.disconnect()
       video.removeEventListener('playing', onPlaying)
+      video.removeEventListener('error', onError)
       video.removeEventListener('loadeddata', tryPlay)
       video.removeEventListener('canplay', tryPlay)
       events.forEach(e => document.removeEventListener(e, onInteraction))
@@ -79,14 +99,16 @@ function Hero() {
         <video
           ref={videoRef}
           className="hero__video"
-          src={heroVideo}
           autoPlay
           loop
           muted
           playsInline
           webkit-playsinline=""
           preload="auto"
-        />
+        >
+          <source src={heroVideoMp4} type="video/mp4" />
+          <source src={heroVideoMov} type="video/quicktime" />
+        </video>
       )}
       <div className="hero__overlay" />
       <p className="hero__date">04.07.2026</p>
